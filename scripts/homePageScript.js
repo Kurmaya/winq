@@ -125,9 +125,9 @@ whyAnim.to('.section-holder',{
 let prodsAnim = gsap.timeline({
     scrollTrigger:{
         trigger:'#us',
-        start:'top 10%',
+        start:'top 5%',
         end: 'bottom 5%',
-        // markers:true,
+        markers:true,
         toggleActions: 'play none reset reset',
     }
 })
