@@ -7,6 +7,15 @@ const handHolder = document.querySelector('.holder');
 const circle = document.querySelector('.circle')
 const textHolder = document.querySelector('.text-holder');
 const spn = document.querySelector('.section-holder span');
+const aiLayer = document.querySelector('#products .text-holder h4');
+// let distTop = ((aiLayer.getBoundingClientRect().top)-aiLayer.getBoundingClientRect())+window.scrollY;
+var element =  aiLayer;
+var bodyRect = document.body.getBoundingClientRect(),
+    elemRect = element.getBoundingClientRect(),
+    offset   = elemRect.top - bodyRect.top ;
+
+// let targetNode = aiLayer;
+// let centerY = targetNode.offsetTop + targetNode.offsetHeight / 2;
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin)
 let heroAnim = gsap.timeline();
@@ -93,15 +102,15 @@ whyAnim.to(textHolder,{
 },'<')
 
 whyAnim.to(circle,{
-    top:'+=30vh',
-    left:'2%',  
+    top:'+=32vh',
+    left:'0',  
     duration:.6,    
 },'-=0.4')
 whyAnim.to(window,{
     scrollTo:{y:750,autoKill: true}
 },'-=0.1')
 whyAnim.to(circle,{
-    top:'+=15vh',
+    top:'+=13vh',
     left:'50%',
     scale:.5,
     opacity:0,  
@@ -135,7 +144,7 @@ prodsAnim.to('#us > img',{
   y:1000,
 })
 prodsAnim.to(circle,{
-    y:'+=136vh',
+    y:(offset-(circle.getBoundingClientRect().top-bodyRect.top))-32,
     x:'+=12vw',
     opacity:1,
     duration:1,
@@ -166,7 +175,8 @@ prodsAnim.to('.exp',{
     background:'#EA5583',
     borderRadius:'25px',
     left:'-5px',
-    paddingLeft:'1rem'
+    paddingLeft:'1rem',
+    
 })
 prodsAnim.to(circle,{
     opacity:0,
