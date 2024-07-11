@@ -74,7 +74,7 @@ section{
     width:80%;
     height: 80%;
     position: relative;
-    top: 10px;
+    top: 5%;
     display: flex;
     flex-direction: column;
     gap:10px;
@@ -86,12 +86,9 @@ section{
 }
 .p-holder{
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap:10px;
-    margin:10px auto;
+   
 }
+
 .section-holder span{
     background: #EA5583;
     width:10px;
@@ -230,7 +227,7 @@ p{
     .left-rect-holder{
         top: 88vh;
         right:auto;
-        left: -8%!important;
+        left: -5%!important;
         transform: rotateZ(180deg);
     }
     /* #products{
@@ -239,14 +236,38 @@ p{
      #us img{
         width: 100%;
         position: relative;
-        bottom:5%;
+        /* bottom:5%; */
         
      }
+     .prods-head{
+        color:white;
+        position: absolute;
+        top:15%;
+        left:15%;
+        width:80%;
+        z-index: 11;
+     }
+     .product{
+        width: 100%;
+        height: 80vh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+     }
+     .p-holder{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        gap:10px;
+        margin:10px auto;
+        height: 65%;
+    }
     .products-holder{
         width:100%;
         height: 100%;
         position: relative;
-        bottom:72vh;
+        /* bottom:72vh; */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -259,50 +280,100 @@ p{
     } */
     .prods-bg{
         position: absolute;
-        width: 730px;
-        height: 900px;
-        transform: rotateZ(-110deg);
+        width: 830px;
+        height: 1300px;
         background: #004AAD;
-        border-radius: 25%;
+        /* transform: rotateZ(-110deg);
+        border-radius: 25%; */
     }
-    
-    .products-holder .text-holder{
+    .prods-list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: absolute;
+        top: 45%;
+        left: 95%;
+        transform: translateX(-50%);
+        /* width:80%; */
+        height: 35%;
+        color:white;
+        z-index: 15;
+    }
+    .prods-list ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100%;
+    }
+    .prods-list ul li{
+        font-family: 'ITC';
+        font-size: 1.2rem;
+        list-style-type: none;
+        z-index: 11;
+        display: inline;
+        margin:auto 5px;
+        text-align: center;
+        transition: .2s ease;
+        width:100%;
+        height:100%;
+        vertical-align: middle;
+    }
+    .prods-list ul li.active{
+        /* font-size:1.8rem; */
+        color:#EA5583;
+        /* border-radius: 50%; */
+    }
+    .products-holder .text-holder{
+        position: relative;
         height: auto;
         width:80%;
+        height:30%;
         margin:auto;
-        top:18%;
+        top:-28%;
         opacity: 0;
         color:white;
         display: flex;
         flex-direction: column;
         gap:10px;
-        padding-left: .5rem;
+        /* padding-left: .5rem; */
     }
+    /* .products-holder .text-holder > *{
+        padding-left:1rem;
+    } */
     #products .image-holder{
         width:80%;
         height: 60%;
         position: absolute;
         z-index: 100;
-        top:50%;
+        top:52%;
         left:-100%;   
     }
     #products .image-holder img{
         width: 100%;
+        height: 100%;
+        position: absolute;
+        opacity: 0;
     }
-
+    #products .image-holder img:nth-of-type(1){
+        opacity: 1;
+    }
+    #prod-p{
+        /* height:200px; */
+        /* overflow-y: scroll; */
+        font-size: 0.8rem;
+    }
     h3,h4{
         /* color:white; */
     }
     h3{
         font-size: 2rem;
-        width:78%;
+        /* width:78%; */
     }
     h4{
         font-size: 1.2rem;
         /* background: #EA5583; */
         border-radius: 50px;
-        padding-left: .5rem;
+        /* padding-left: .5rem; */
     }
     p{
         font-size: .9rem;
@@ -310,9 +381,14 @@ p{
     .exp{
         position: absolute;
         width:100%;
-        height: 100%;
+        height: auto;
+        max-height: 100px;
         z-index: -1;
         transform-origin: right;
-        padding: 1rem;
+        padding: .5rem 0;
+        font-size: 1rem;
+        right:15px;
+        
     }
 }
+
