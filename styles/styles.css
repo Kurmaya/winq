@@ -64,7 +64,7 @@ section{
     width:95%;
     height: 100%;
     position: relative;
-    /* bottom:50px; */
+    bottom:60px;
 }
 .holder img{
     width: 100%;
@@ -190,6 +190,10 @@ p{
         right: 5%;
         scale:.5;
         z-index: 100;
+        width:50px;
+        height: 50px;
+        background: #EA5583;
+        border-radius: 50%;
     }
     .hero-holder{
         position: relative;
@@ -201,7 +205,7 @@ p{
         height: 100%;
         margin: auto;
         position: relative;
-        bottom:70px;
+        bottom:120px;
         display: flex;
         flex-direction: column;
         gap:10px 0;
@@ -217,7 +221,11 @@ p{
     }
     .right-rect-holder img,.left-rect-holder img{
         width: 100%;
-        height: 150%;
+        height: 100%;
+    }
+    .right-rect-holder img:nth-of-type(2){
+        position: relative;
+        bottom:10px;
     }
     .left-rect-holder{
         top: 88vh;
@@ -291,10 +299,13 @@ p{
         width:78%;
     }
     h4{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         /* background: #EA5583; */
         border-radius: 50px;
         padding-left: .5rem;
+    }
+    p{
+        font-size: .9rem;
     }
     .exp{
         position: absolute;

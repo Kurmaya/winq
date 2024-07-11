@@ -9,6 +9,7 @@ const textHolder = document.querySelector('.text-holder');
 const spn = document.querySelector('.section-holder span');
 const aiLayer = document.querySelector('#products .text-holder h4');
 // let distTop = ((aiLayer.getBoundingClientRect().top)-aiLayer.getBoundingClientRect())+window.scrollY;
+const usSpan = document.querySelector('#us span').getBoundingClientRect();
 var element =  aiLayer;
 var bodyRect = document.body.getBoundingClientRect(),
     elemRect = element.getBoundingClientRect(),
@@ -28,7 +29,7 @@ heroAnim.from(handHolder,{
     ease:"bounce.out"
 })
 heroAnim.to(rightRect,{
-    right:'-5%',
+    right:'-8%',
     duration:.8,
     ease:"bounce.out"
 },'<')
@@ -49,74 +50,71 @@ heroAnim.from(textHolder,{
     ease:"bounce.out"
 },'<')
 gsap.registerPlugin(ScrollTrigger);
-
+//section 1-2 animation
 let whyAnim = gsap.timeline({
     scrollTrigger:{
         trigger:'#hero',
-        start:'top 5%',
-        end: 'bottom 95%',
-        duration:1.5,
-        // scrub:.1,
+        start:'-50px 1%',
+        scrub:true,
         // markers:true,
-        toggleActions: 'play none reverse reverse',
-        // pin:true,
-        // onUpdate:()=>{console.log(circle)},
-        // snap:.98,
+        toggleActions: 'play none reverse none',
+        
     }
     
 })
+
 whyAnim.to(circle,{
-    top:'10%',
-    right:'5%',  
+    top:'22vh',
+    x:'60%',  
 })
 whyAnim.to(circle,{
-    top:'52vh',
-    right:'-2%',  
-    duration:1,
+    top:'42vh',
+    x:'80%',  
 })
-whyAnim.to(window,{
-    scrollTo:{y:300,autoKill: true}
-},'<')
+whyAnim.to(circle,{
+    top:(rightRect.getBoundingClientRect().top+window.scrollY)-rightRect.getBoundingClientRect().height/2,
+    x:'50%',  
+    duration:.5,
+})
+
 whyAnim.to(rightRect.querySelectorAll('img')[0],{
     rotateZ:'-45deg',
-    // rotateX:'180deg',
     x:'10%',
     y:20,
     duration:.2
 },'-=0.1')
 whyAnim.to(rightRect.querySelectorAll('img')[1],{
     rotateZ:'-45deg',
-    // rotateX:'180deg',
     x:'10%',
     y:20,
     duration:.2
-})
-
-whyAnim.to(handHolder,{
-    opacity:0,
-    duration:.2,
-},'<')
-whyAnim.to(textHolder,{
-    opacity:0,
-    duration:.2,
-},'<')
-
-whyAnim.to(circle,{
-    top:'+=32vh',
-    left:'0',  
-    duration:.6,    
-},'-=0.4')
-whyAnim.to(window,{
-    scrollTo:{y:750,autoKill: true}
 },'-=0.1')
-whyAnim.to(circle,{
-    top:'+=13vh',
-    left:'50%',
-    scale:.5,
-    opacity:0,  
-    duration:.8,
-},'<')
 
+const leftt = leftRect.getBoundingClientRect().top;
+
+whyAnim.to(circle,{
+    top:(leftt+window.scrollY)-leftRect.getBoundingClientRect().height/2,
+    x:'-650%',  
+    duration:.8,    
+},'-=0.1')
+whyAnim.to(leftRect,{
+    rotateZ:'200deg',
+    duration:.4,
+})
+whyAnim.to(circle,{
+    top:'90vh',
+    x:'-550%',
+    scale:.6,
+    duration:.8,
+},'-=0.3')
+
+whyAnim.to(circle,{
+    top:((usSpan.top)-15-usSpan.height/2)+window.scrollY,
+    x:-((usSpan.left/2)+5)-usSpan.width/1.5,
+    scale:.2,
+    opacity:0,  
+    duration:.5,
+})
 whyAnim.to('.section-holder',{
     opacity:1,
     },'<')
@@ -130,38 +128,33 @@ whyAnim.to('.section-holder',{
     },'-=0.1')
 
 
-
+//section 2-3 animation
 let prodsAnim = gsap.timeline({
     scrollTrigger:{
         trigger:'#us',
-        start:'top 5%',
-        end: 'bottom 5%',
+        start:'top 1%',
+        // end: 'bottom 5%',
+        scrub:true,
         markers:true,
-        toggleActions: 'play none reset reset',
+        toggleActions: 'play none reverse none',
     }
 })
-prodsAnim.to('#us > img',{
-  y:1000,
+prodsAnim.to(circle,{
+    scale:.2,
+    opacity:1,
+    duration:.4,
 })
+
 prodsAnim.to(circle,{
     y:(offset-(circle.getBoundingClientRect().top-bodyRect.top))-32,
     x:'+=12vw',
-    opacity:1,
     duration:1,
 })
 
+prodsAnim.to('#us > img',{
+    y:1000,
+  })
 
-// prodsAnim.to(leftRect,{
-//     y:'+=90vh',
-//     zIndex:'100'
-// },'<')
-prodsAnim.to(window,{
-    scrollTo:{y:'#products'}
-},'<')
-// prodsAnim.to(circle,{
-//     opacity:0,
-//     duration:.1,
-// },'+=0.1')
 prodsAnim.to('.products-holder',{
     bottom:'-10%',
 },'<')
