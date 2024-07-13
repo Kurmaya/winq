@@ -153,8 +153,8 @@ prodsAnim.to(circle,{
     // scale:.2,
     opacity:1,
     // duration:.4,
-    top:(document.querySelectorAll('.p-holder p')[1].getBoundingClientRect().top),
-    x:'50%',
+    top:(document.querySelectorAll('.p-holder p')[2].getBoundingClientRect().top+window.scrollY),
+    x:'-50%',
     // x:-(aiLayer.getBoundingClientRect().left),
     duration:1,
     scale:.4,
@@ -163,10 +163,11 @@ prodsAnim.to(circle,{
 prodsAnim.to(circle,{
     // scale:.2,
     opacity:1,
-    onStart:()=>{console.log('this')},
+    // onStart:()=>{console.log('this')},
+    x:'50%',
     top:aiLayer.getBoundingClientRect().bottom-aiLayer.getBoundingClientRect().height+window.scrollY-35,
     duration:1,
-},'+=0.5')
+},'+=0.1')
 prodsAnim.to(circle,{
     scale:.8,
 })
@@ -189,6 +190,12 @@ prodsAnim.to('.products-holder .text-holder ',{
     opacity:1,
     
 },'<')
+prodsAnim.from('.left-arrow',{
+left:'-150%'
+},'<')
+prodsAnim.from('.right-arrow',{
+    right:'150%'
+    },'<')
 prodsAnim.to('.prods-bg',{
     rotateZ:'-110deg',
     borderRadius: '25%',
@@ -246,13 +253,13 @@ uspAnim.to(circle,{
 
 uspAnim.from('.usp-text-holder',{
     left:'150%'
-},'+=0.3')
+},'+=0.1')
 
 uspAnim.to(circle,{
     scale:0.8,
     top:(document.querySelector('.usp-image-holder').getBoundingClientRect().top+window.scrollY)-40,
     left:document.querySelector('.usp-image-holder').getBoundingClientRect().left,
-},'<')
+},'-=0.6')
 
 uspAnim.from('.usp-image-holder',{
     opacity:0,
