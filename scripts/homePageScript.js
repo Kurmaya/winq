@@ -272,11 +272,67 @@ uspAnim.to('.usp-overlay',{
 },'<')
 
 
-//usp-team animations
+// usp-team animations
 
-// let uspTeamAnim = gsap.timeline({
-//     scrollTrigger:{
-//         trigger:'#usp',
-//         start:''
-//     }
-// })
+let uspTeamAnim = gsap.timeline({
+    scrollTrigger:{
+        trigger:'#usp',
+        start:'40% 40%',
+        scrub:true,
+    }
+})
+uspTeamAnim.to('.usp-holder',{
+    width:'80%',
+    rotateZ:'-75deg',
+    left:'-55%', 
+})
+.to('.usp-image-holder',{
+    opacity:0,
+},'<')
+.from('.team-bg',{
+    left:'-150%',
+},'<')
+uspTeamAnim.to(circle,{
+    left:(document.querySelector('.team-desc').getBoundingClientRect().right)-10,
+    top:document.querySelector('.team-desc').getBoundingClientRect().top+window.scrollY,
+},'<')
+uspTeamAnim.to(circle,{
+    top:(document.querySelector('.team-bg').getBoundingClientRect().bottom+scrollY)-80,
+    left:'40%',
+    scale:.6,
+},'+=0.1')
+const teamPersons = document.querySelectorAll('.team-person');
+let teamAnim = gsap.timeline({
+    scrollTrigger:{
+        trigger:'#team',
+        start:'20% 30%',
+        end:'bottom 85%',
+        scrub:true,
+        markers:true,
+    }
+})
+
+
+teamAnim.to(circle,{
+    top:teamPersons[3].getBoundingClientRect().top+window.scrollY+(teamPersons[3].getBoundingClientRect().height)/5,
+    left:(teamPersons[3].getBoundingClientRect().left)-teamPersons[3].getBoundingClientRect().width/2.5,
+})
+teamAnim.to(circle,{
+    top:teamPersons[1].getBoundingClientRect().top+window.scrollY+(teamPersons[1].getBoundingClientRect().height)/5,
+    left:(teamPersons[1].getBoundingClientRect().right)-teamPersons[1].getBoundingClientRect().width/3.5,
+})
+teamAnim.to(circle,{
+    top:teamPersons[4].getBoundingClientRect().top+window.scrollY+(teamPersons[4].getBoundingClientRect().height)/5,
+    left:(teamPersons[4].getBoundingClientRect().left)-teamPersons[4].getBoundingClientRect().width/2.5,
+})
+teamAnim.to(circle,{
+    top:teamPersons[2].getBoundingClientRect().top+window.scrollY+(teamPersons[2].getBoundingClientRect().height)/5,
+    left:(teamPersons[2].getBoundingClientRect().right)-teamPersons[2].getBoundingClientRect().width/3.5,
+})
+teamAnim.to(circle,{
+    top:document.getElementById('partners').getBoundingClientRect().top+window.scrollY,
+    left:.3*(window.innerWidth),
+})
+teamAnim.from('.partners-bg',{
+    left:'-150%',
+},'<')

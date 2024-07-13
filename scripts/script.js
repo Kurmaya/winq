@@ -1104,3 +1104,15 @@ uspLeft.addEventListener('click',()=>{
     }
     
     })
+
+    
+
+const questions= document.querySelectorAll('.question');
+questions.forEach(q=>{
+    q.addEventListener('click',()=>{
+        questions.forEach(qu=>{
+            qu.querySelector('.answer').classList.remove('active');
+        })
+        q.querySelector('.answer').classList.toggle('active');
+    })
+})
