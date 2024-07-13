@@ -181,7 +181,7 @@ p{
         top:0;
         
     }
-    .circle,.black{
+    .circle{
         position: absolute;
         top:10%;
         right: 5%;
@@ -269,6 +269,7 @@ p{
         gap:10px;
         margin:10px auto;
         height: 65%;
+        z-index: 11;
     }
     .products-holder{
         width:100%;
@@ -336,7 +337,7 @@ p{
         width:80%;
         height:30%;
         margin:auto;
-        top:-200px;
+        top:-160px;
         opacity: 0;
         color:white;
         display: flex;
@@ -425,6 +426,13 @@ p{
         bottom:7%;
         transform: translateX(-50%);
     }
+    .usp-overlay{
+        position: absolute;
+        width:100%;
+        height: 100%;
+        border-radius: 50%;
+        background: #EA5583;
+    }
     .usp-image-holder img{
         width: 100%;
         /* height: 100%; */
@@ -437,8 +445,8 @@ p{
     #usp h2{
         position: relative;
         width:80%;
-        margin: auto;
-        top:70px;
+        /* margin: auto; */
+        /* top:70px; */
     }
     .usp-text-holder{
         position: relative;
@@ -486,5 +494,78 @@ p{
         font-size: .8rem;
         font-family: 'ITC-med';
     }
+    /* team section */
+    #team{
+        color:white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height:140vh;
+        min-height: 100vh;
+        /* overflow: scroll; */
+
+    }
+    .team-bg{
+    position: relative;
+    width: 400px;
+    height: 454px;
+    border-radius: 0 350px 350px 0;
+    background: #004aad;
+    transform: rotateZ(15deg);
+    left: -12%;
+    /* top:8vh; */
+    }
+    .team-desc{
+        position: relative;
+        width: 320px;
+        top: -20vh;
+        left: 10%;
+    }
+    .person-desc{
+        color:black;
+    }
+    .team-holder{
+        width: 100%;
+        height: 100%;
+        /* background: red; */
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        place-items:center;
+    }
+    .col{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width:100%;
+        height:80%;
+        margin: auto;
+        position: relative;
+    }
+    .col:nth-of-type(2){
+        top:80px;
+    }
+    .team-person{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap:10px;
+    }
+    .team-person img{
+        width:150px;
+        height: 150px;
+        border-radius: 100%;
+        background: #004AAD;
+
+    }
+    .person-desc{
+        border:1px solid #004AAD;
+        width:200px;
+        border-radius: 40px;
+        padding:.2rem;
+    }
+
 }
 

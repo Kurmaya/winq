@@ -142,7 +142,7 @@ let prodsAnim = gsap.timeline({
         start:'top 5%',
         // end: 'bottom 5%',
         scrub:true,
-        markers:true,
+        // markers:true,
         toggleActions: 'play none reverse none',
     }
 })
@@ -194,7 +194,7 @@ prodsAnim.to('.prods-bg',{
     borderRadius: '25%',
 })
 prodsAnim.to('#us > img',{
-    y:400,
+    y:200,
   },'<')
 
 
@@ -214,3 +214,62 @@ prodsAnim.to('.products-holder .image-holder',{
 
 
 //usp section animations
+let uspAnim = gsap.timeline({
+    scrollTrigger:{
+        trigger:'#products',
+        start:'45% 40%',
+        end:'bottom 5%',
+        scrub:true,
+        // markers:true,
+    }
+})
+uspAnim.to(aiLayer,{
+    background:'transparent',
+})
+
+uspAnim.to(circle,{
+    width:'50px',
+    height:'50px',
+    opacity:1,
+    left:aiLayer.getBoundingClientRect().left*3+50,
+},'<')
+uspAnim.to('.image-holder',{
+    left:'-150%',
+})
+uspAnim.to('.prods-bg',{
+    rotateZ:'0',
+},'<')
+uspAnim.to(circle,{
+    top:(document.querySelector('#usp').getBoundingClientRect().top+window.scrollY)+100,
+    left:'-8%',
+},'<')
+
+uspAnim.from('.usp-text-holder',{
+    left:'150%'
+},'+=0.3')
+
+uspAnim.to(circle,{
+    scale:0.8,
+    top:(document.querySelector('.usp-image-holder').getBoundingClientRect().top+window.scrollY)-40,
+    left:document.querySelector('.usp-image-holder').getBoundingClientRect().left,
+},'<')
+
+uspAnim.from('.usp-image-holder',{
+    opacity:0,
+    scale:0,
+    rotateZ:'180deg',
+    duration:0.6
+},'+=0.2')
+uspAnim.to('.usp-overlay',{
+    opacity:0,
+},'<')
+
+
+//usp-team animations
+
+// let uspTeamAnim = gsap.timeline({
+//     scrollTrigger:{
+//         trigger:'#usp',
+//         start:''
+//     }
+// })
