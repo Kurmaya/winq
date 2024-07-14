@@ -306,9 +306,9 @@ let teamAnim = gsap.timeline({
     scrollTrigger:{
         trigger:'#team',
         start:'20% 30%',
-        end:'bottom 85%',
+        end:'130% 80%',
         scrub:true,
-        markers:true,
+        // markers:true,
     }
 })
 
@@ -329,10 +329,73 @@ teamAnim.to(circle,{
     top:teamPersons[2].getBoundingClientRect().top+window.scrollY+(teamPersons[2].getBoundingClientRect().height)/5,
     left:(teamPersons[2].getBoundingClientRect().right)-teamPersons[2].getBoundingClientRect().width/3.5,
 })
-teamAnim.to(circle,{
-    top:document.getElementById('partners').getBoundingClientRect().top+window.scrollY,
-    left:.3*(window.innerWidth),
+// teamAnim.to(circle,{
+//     top:document.getElementById('partners').getBoundingClientRect().top+window.scrollY,
+//     left:.3*(window.innerWidth),
+// })
+.to(circle,{
+    top:(document.getElementById('partners').getBoundingClientRect().top+window.scrollY),
+    left:'58%',
 })
 teamAnim.from('.partners-bg',{
     left:'-150%',
+},'<')
+.to(circle,{
+    top:(document.querySelector('.partners-desc').getBoundingClientRect().bottom+window.scrollY)+20,
+    left:'78%',
+})
+
+
+
+let partnerAnim = gsap.timeline({
+    scrollTrigger:{
+        trigger:'#partners',
+        start:'30% 30%',
+        end:'80% 40%',
+        scrub:true,
+        // markers:true,
+    }
+})
+
+partnerAnim.to(circle,{
+top:(document.querySelector('.partners-holder').getBoundingClientRect().top+window.scrollY)-80,
+left:'75%',
+// left:'78%',
+})
+partnerAnim.to(circle,{
+    top:(document.querySelector('#testimonials h2').getBoundingClientRect().top+window.scrollY)-30,
+    // left:'-8%',
+    left:'78%',
+    })
+    .from('#testimonials',{
+        left:'-150%',
+    },'+=.7')
+
+// testimonials animation
+let testiAnim = gsap.timeline({
+    scrollTrigger:{
+        trigger:'#testimonials',
+        start:'50% 30%',
+        end:'90% 30%',
+        scrub:true,
+        // markers:true,
+    }
+})
+
+testiAnim.to(circle,{
+    top:document.getElementById('faqs').getBoundingClientRect().top+window.scrollY,
+
+})
+testiAnim.from('#faqs h2',{
+    left:'-150%',
+})
+
+.to(circle,{
+    top:(document.querySelector('.q-circle').getBoundingClientRect().top+window.scrollY)-document.querySelector('.q-circle').getBoundingClientRect().height/.65,
+    scale:.4,
+    left:document.querySelector('.q-circle').getBoundingClientRect().left-38,
+    opacity:0,
+})
+testiAnim.from('.bg-holder > * ',{
+    opacity:0,
 },'<')

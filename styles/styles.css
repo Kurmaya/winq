@@ -762,7 +762,7 @@ height: 300px;
     position: relative;
     width: 80%;
     margin: auto;
-    top:50px;
+    top:80px;
   }
   .faqs-bg{
     background: #004AAD;
@@ -775,12 +775,18 @@ height: 300px;
   }
   .bg-holder{
     position: absolute;
-    right:0;
-    bottom:-5%;
+    right:5%;
+    bottom:-8%;
     display: grid;
     place-items:center;
+    transition: .3s ease;
+    transform: rotateZ(20deg);
   }
-  
+  .bg-holder.active{
+    transform: rotateZ(10deg) translateY(-10px);
+    bottom:-5%;
+    right:3%;
+  }
   .faqs-bg img.active{
     bottom:0;
   }
@@ -790,11 +796,12 @@ height: 300px;
     border-radius: 50%;
     background: #EA5583;
     position: relative;
-    left:10px;
+    left:15px;
+    top:10px;
   }
   .faqs-holder{
     position: relative;
-    top:15%;
+    top:22%;
     width:80%;
     margin:auto
   }
@@ -805,31 +812,82 @@ height: 300px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:10px;
+    /* gap:10px; */
   }
   .question{
-    margin:10px auto;
+    /* margin:10px auto; */
     transition:.2s ease;
+    /* min-height:25px; */
+    /* border:1px solid #EA5583; */
+    /* border-radius: 25 px; */
+    /* padding:.5rem; */
   }
   
   .question span{
     margin-right:10px;
     display: inline;
     position: absolute;
-    left:-5%
+    left:-5%;
+    transition: 0.3s ease;
+  }
+  .question span.active{
+    transform: rotateZ(90deg);
   }
   .question h4{
     color:#004AAD;
   }
   .answer{
-    height: 0;
+    height: 10px;
     opacity: 0;
+    margin-top:10px;
+    transform: translateY(-30px);
   }
   .answer.active{
-    height:auto;
+    height:80px;
     opacity: 1;
     transition: .3s ease;
+    transform: translateY(0);
     /* margin-left:10px; */
+  }
+  footer{
+    width:100%;
+    height:20vh;
+    background: #EA5583;
+    position: relative;
+  }
+  .footer-links{
+    position: relative;
+    height:200%;
+    width:80vw;
+    background: #004AAD;
+    margin: auto;
+    border-radius: 25px;
+    bottom:120%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:White;
+  }
+  footer p{
+    font-size: .6rem;
+    position: relative;
+    top:6%;
+  }
+  .footer-links ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 80%;
+
+  }
+  .footer-links ul li{
+    /* display: inline; */
+    font-size: 1rem;
+    color:white;
+    list-style-type: none;
+    font-family: 'ITC-med';
   }
 }
 

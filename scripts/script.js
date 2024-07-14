@@ -1112,7 +1112,11 @@ questions.forEach(q=>{
     q.addEventListener('click',()=>{
         questions.forEach(qu=>{
             qu.querySelector('.answer').classList.remove('active');
+            qu.querySelector('span').classList.remove('active');
+            document.querySelector('.bg-holder').classList.remove('active');
         })
         q.querySelector('.answer').classList.toggle('active');
+        q.querySelector('span').classList.toggle('active');
+        document.querySelector('.bg-holder').classList.toggle('active');
     })
 })
