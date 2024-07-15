@@ -20,7 +20,7 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin)
 let heroAnim = gsap.timeline();
 window.addEventListener('load',()=>{
-    window.scrollY=0;
+    window.scrollTo(0,0);
     heroAnim;
 });
 
