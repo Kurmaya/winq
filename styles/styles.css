@@ -451,8 +451,8 @@ p{
     }
     .usp-overlay{
         position: absolute;
-        width:100%;
-        height: 100%;
+        width:120%;
+        height: 120%;
         top:50%;
         left:50%;
         transform: translate(-50%,-50%);
@@ -476,7 +476,7 @@ p{
     }
     .usp-text-holder{
         position: relative;
-        top:80px;
+        top:60px;
         width:80%;
         margin: auto;
         height:30vh;
@@ -519,6 +519,8 @@ p{
     #usp p{
         font-size: .8rem;
         font-family: 'ITC-med';
+        position:relative;
+        /* top:30px; */
     }
     /* team section */
     #team{
@@ -762,7 +764,7 @@ height: 300px;
     position: relative;
     width: 80%;
     margin: auto;
-    top:80px;
+    top:60px;
   }
   .faqs-bg{
     background: #004AAD;

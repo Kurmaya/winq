@@ -19,7 +19,10 @@ var bodyRect = document.body.getBoundingClientRect(),
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin)
 let heroAnim = gsap.timeline();
-window.addEventListener('load',heroAnim);
+window.addEventListener('load',()=>{
+    window.scrollY=0;
+    heroAnim;
+});
 
 heroAnim.from(handHolder,{
     width:'100%',
@@ -54,7 +57,7 @@ gsap.registerPlugin(ScrollTrigger);
 let whyAnim = gsap.timeline({
     scrollTrigger:{
         trigger:'#hero',
-        start:'top 1%',
+        start:'30% 20%',
         end: 'bottom 10%',
         scrub:true,
         // markers:true,
@@ -386,10 +389,10 @@ testiAnim.to(circle,{
     top:document.getElementById('faqs').getBoundingClientRect().top+window.scrollY,
 
 })
+
 testiAnim.from('#faqs h2',{
     left:'-150%',
-})
-
+},'<')
 .to(circle,{
     top:(document.querySelector('.q-circle').getBoundingClientRect().top+window.scrollY)-document.querySelector('.q-circle').getBoundingClientRect().height/.65,
     scale:.4,
@@ -398,4 +401,5 @@ testiAnim.from('#faqs h2',{
 })
 testiAnim.from('.bg-holder > * ',{
     opacity:0,
-},'<')
+    top:'-25%',
+},'-=0.3')

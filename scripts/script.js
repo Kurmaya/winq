@@ -1110,13 +1110,26 @@ uspLeft.addEventListener('click',()=>{
 const questions= document.querySelectorAll('.question');
 questions.forEach(q=>{
     q.addEventListener('click',()=>{
-        questions.forEach(qu=>{
-            qu.querySelector('.answer').classList.remove('active');
-            qu.querySelector('span').classList.remove('active');
-            document.querySelector('.bg-holder').classList.remove('active');
-        })
-        q.querySelector('.answer').classList.toggle('active');
-        q.querySelector('span').classList.toggle('active');
-        document.querySelector('.bg-holder').classList.toggle('active');
+        if(q.querySelector('.answer').classList.contains('active')){
+            // document.querySelector('.bg-holder').classList.remove('active');
+            console.log('active');
+            q.querySelector('.answer').classList.remove('active');
+        q.querySelector('span').classList.remove('active');
+        document.querySelector('.bg-holder').classList.remove('active');
+        }
+        else {
+            questions.forEach(qu=>{
+                
+                qu.querySelector('.answer').classList.remove('active');
+                qu.querySelector('span').classList.remove('active');
+                // document.querySelector('.bg-holder').classList.remove('active');
+            })
+            q.querySelector('.answer').classList.add('active');
+                    q.querySelector('span').classList.add('active');
+                    document.querySelector('.bg-holder').classList.add('active');
+                    }
+       
+ 
+        
     })
 })
