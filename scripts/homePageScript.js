@@ -95,13 +95,21 @@ whyAnim.to(rightRect.querySelectorAll('img')[1],{
 },'-=0.1')
 
 const leftt = leftRect.getBoundingClientRect().top;
-
+whyAnim.to('.section-holder',{
+    opacity:1,
+    },'<')
+   
+    whyAnim.from('.p-holder',{
+        y:200,
+        ease:"bounce.out"
+    },'<')
 whyAnim.to(circle,{
     top:(-12)+(leftt+window.scrollY)-leftRect.getBoundingClientRect().height/2,
     // x:'-660%',  
     x: leftRect.getBoundingClientRect().right-window.innerWidth,
     duration:.8,    
 },'-=0.4')
+
 whyAnim.to(leftRect,{
     rotateZ:'200deg',
     duration:.4,
@@ -125,14 +133,7 @@ whyAnim.to(circle,{
     // opacity:0,  
     duration:.5,
 })
-whyAnim.to('.section-holder',{
-    opacity:1,
-    },'<')
-   
-    whyAnim.from('.p-holder',{
-        y:200,
-        ease:"bounce.out"
-    },'<')
+
     // whyAnim.to(spn,{
     //     opacity:1,
     // },'-=0.1')
@@ -163,6 +164,12 @@ prodsAnim.to(circle,{
     scale:.4,
     
 },'<')
+
+prodsAnim.to('.products-holder .text-holder ',{
+    opacity:1,
+},'<')
+
+
 prodsAnim.to(circle,{
     // scale:.2,
     opacity:1,
@@ -171,6 +178,13 @@ prodsAnim.to(circle,{
     top:aiLayer.getBoundingClientRect().bottom-aiLayer.getBoundingClientRect().height+window.scrollY-35,
     duration:1,
 },'+=0.1')
+
+prodsAnim.from('.left-arrow',{
+left:'-150%'
+},'<')
+prodsAnim.from('.right-arrow',{
+    right:'150%'
+    },'<')
 prodsAnim.to(circle,{
     scale:.8,
 })
@@ -182,6 +196,7 @@ prodsAnim.to(circle,{
     zIndex:'9!important',
     opacity:0,
 })
+
 prodsAnim.to('.exp',{
     background:'#EA5583',
     borderRadius:'25px',
@@ -189,19 +204,13 @@ prodsAnim.to('.exp',{
     paddingLeft:'1rem',
     
 },'<')
-prodsAnim.to('.products-holder .text-holder ',{
-    opacity:1,
-    
-},'<')
-prodsAnim.from('.left-arrow',{
-left:'-150%'
-},'<')
-prodsAnim.from('.right-arrow',{
-    right:'150%'
-    },'<')
+
 prodsAnim.to('.prods-bg',{
     rotateZ:'-110deg',
     borderRadius: '25%',
+    x:'-20%',
+    y:'5%'
+    // width:'700px'
 })
 prodsAnim.to('#us > img',{
     y:200,

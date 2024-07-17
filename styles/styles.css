@@ -240,6 +240,7 @@ p{
     /* #products{
         bottom:30vh;
     } */
+     
      #us img{
         width: 100%;
         position: relative;
@@ -259,12 +260,12 @@ p{
       .right-arrow,.usp-right-arrow{
         transform: rotate(-45deg);
         -webkit-transform: rotate(-45deg);
-        right:5%;
+        right:3%;
       }
       .left-arrow,.usp-left-arrow{
         transform: rotate(135deg);
         -webkit-transform: rotate(135deg);
-        left:5%;
+        left:3%;
       }
      .prods-head{
         color:white;
@@ -311,8 +312,10 @@ p{
     } */
     .prods-bg{
         position: absolute;
-        width: 830px;
-        height: 1300px;
+        /* width: 830px;
+        height: 1300px; */
+        width:195%;
+        height:125%;
         background: #004AAD;
         /* transform: rotateZ(-110deg);
         border-radius: 25%; */
@@ -438,7 +441,7 @@ p{
         transform: translateX(-50%);
 
         /* transform: rotate(-110deg); */
-        bottom:0;
+        bottom:60px;
     }
     .usp-image-holder{
         /* width: 85vw; */
@@ -485,7 +488,7 @@ p{
         justify-content: flex-start;
         align-items: flex-start;
         gap:20px;
-        
+        z-index: 10;
     }
     .usp-list{
         
@@ -495,7 +498,6 @@ p{
         transform: translateY(-40%);
         right:0;
         z-index: 10;
-     
         height: 150px;
     }
 
@@ -759,6 +761,9 @@ height: 300px;
     right: -5%;
   }
   /* faqs section */
+  #faqs{
+    height: 90vh;
+  }
   #faqs h2{
     color:white;
     position: relative;
@@ -798,8 +803,8 @@ height: 300px;
     border-radius: 50%;
     background: #EA5583;
     position: relative;
-    left:15px;
-    top:10px;
+    left:12px;
+    top:12px;
   }
   .faqs-holder{
     position: relative;
@@ -817,12 +822,7 @@ height: 300px;
     /* gap:10px; */
   }
   .question{
-    /* margin:10px auto; */
     transition:.2s ease;
-    /* min-height:25px; */
-    /* border:1px solid #EA5583; */
-    /* border-radius: 25 px; */
-    /* padding:.5rem; */
   }
   
   .question span{

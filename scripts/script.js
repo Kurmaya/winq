@@ -54,33 +54,40 @@ leftArr.addEventListener('click',()=>{
                 opacity:0,
                 duration:0.3
             },'<')
+            .to(prodsHead,{
+                innerHTML:"AI-Layered Marketing ",
+            })
+            
+            .to(prodsPara,{
+                textContent:'WINQ empowers brokers with a powerful AI marketing suite for cross-platform posting, lead generation and complete social media management.',
+                // opacity:1,
+            },'<')
             .to('.image-holder',{
                 left:'-100%',
                 duration:0.2,
                 ease:'power1'
             },'<')
 
-            .to(prodsHead,{
-                opacity:1,
-            })
-            
+          
             .to(prodsHead,{
                 width:'auto',
                 // duration:.3,
                 // ease:'power1'
+                opacity:1,
             })
-            .to(prodsHead,{
-                textContent:'AI-Layered Marketing',
-            })
+            // .to(prodsHead,{
+            //     opacity:1,
+            // })
+            
             .to(prodsPara,{
-                textContent:'WINQ empowers brokers with a powerful AI marketing suite for cross-platform posting, lead generation and complete social media management.',
+                // textContent:'WINQ empowers brokers with a powerful AI marketing suite for cross-platform posting, lead generation and complete social media management.',
                 opacity:1,
             },'<')
             .set('.image-holder>img',{attr:{src:"./assets/bot.png"}})
             .to('.image-holder',{
                 left:'0',
                 duration:0.2,
-                ease:'power1'
+                // ease:'power1'
             },'<')
           
             console.log('0');
@@ -320,6 +327,10 @@ leftArr.addEventListener('click',()=>{
                 opacity:0,
                 duration:0.1
             },'<')
+            .to(prodsPara,{
+                textContent:'Unlock exclusive savings for WINQ users! Enjoy 10% to 15% discounts* on select items just for you. *Conditions apply ',
+                // opacity:1,
+            })
             .to('.image-holder',{
                 left:'-150%',
                 duration:0.2,
@@ -338,7 +349,7 @@ leftArr.addEventListener('click',()=>{
                 textContent:'Special Discount for WINQ Users',
             })
             .to(prodsPara,{
-                textContent:'Unlock exclusive savings for WINQ users! Enjoy 10% to 15% discounts* on select items just for you. *Conditions apply ',
+                // textContent:'Unlock exclusive savings for WINQ users! Enjoy 10% to 15% discounts* on select items just for you. *Conditions apply ',
                 opacity:1,
             },'<')
             .set('.image-holder>img',{attr:{src:"./assets/prods-hand.png"}})
@@ -689,6 +700,10 @@ rightArr.addEventListener('click',()=>{
                 opacity:0,
                 duration:0.1
             },'<')
+            .to(prodsPara,{
+                textContent:'Unlock exclusive savings for WINQ users! Enjoy 10% to 15% discounts* on select items just for you. *Conditions apply ',
+                // opacity:1,
+            })
             .to('.image-holder',{
                 left:'-150%',
                 duration:0.2,
@@ -707,7 +722,7 @@ rightArr.addEventListener('click',()=>{
                 textContent:'Special Discount for WINQ Users',
             })
             .to(prodsPara,{
-                textContent:'Unlock exclusive savings for WINQ users! Enjoy 10% to 15% discounts* on select items just for you. *Conditions apply ',
+                // textContent:'Unlock exclusive savings for WINQ users! Enjoy 10% to 15% discounts* on select items just for you. *Conditions apply ',
                 opacity:1,
             },'<')
             .set('.image-holder>img',{attr:{src:"./assets/prods-hand.png"}})
@@ -780,18 +795,17 @@ if(uspCount<3){
         case 1:
             tl.to(uspSub,{
                 opacity:0,
-                // textContent:'Digital Transformation',
+                duration:0.15
             })
             tl.to(uspP,{
                 opacity:0,
-                // textContent:"WINQ equips brokers with robust tools (cite the tools, give examples, say a feature that is directly applicable to the product)  and a dedicated social media expert support to establish a lasting social presence. Our social media experts will fortify your brand's success in the digital space.",
-            },'<')
+            },'-=0.05')
             
             tl.to('.usp-image-holder',{
                 scale:0.15,
                 rotateZ:'-45deg',
                 bottom:'35%',
-            },'-=0.2')
+            },'-=0.1')
             tl.to('.usp-overlay',{
                 opacity:1,
             },'<')
@@ -832,28 +846,20 @@ if(uspCount<3){
             case 2:
                 tl.to(uspSub,{
                     opacity:0,
-                    // textContent:'Digital Transformation',
+                    duration:0.15,
                 })
                 tl.to(uspP,{
                     opacity:0,
-                    // textContent:"WINQ equips brokers with robust tools (cite the tools, give examples, say a feature that is directly applicable to the product)  and a dedicated social media expert support to establish a lasting social presence. Our social media experts will fortify your brand's success in the digital space.",
-                },'<')
+                },'-=0.05')
                 
                 tl.to('.usp-image-holder',{
                     scale:0.15,
                     rotateZ:'-45deg',
                     bottom:'35%',
-                },'-=0.2')
+                },'-=0.1')
                 tl.to('.usp-overlay',{
                     opacity:1,
                 },'<')
-                
-                tl.to(circle,{
-                    left:'+=15%',
-                },'<')
-                tl.to(circle,{
-                    left:'-=15%',
-                },'+=0.1')
                 tl.to(uspSub,{
                     // opacity:0,
                     textContent:'AI-Layered Marketing',
@@ -862,6 +868,13 @@ if(uspCount<3){
                     // opacity:0,
                     textContent:"WINQ’s AI-powered marketing interface empowers you to effortlessly post unlimited product ads across multiple social media platforms, design landing pages, and run campaigns with minimal human intervention. With WINQ, creation is simplified—you just need to act. We provide personalized support and social media expertise as your ally in expanding your insurance offerings and elevating your sales capabilities. We’re dedicated to empowering you on your journey to success."
                 },'<')
+                tl.to(circle,{
+                    left:'+=15%',
+                },'<')
+                tl.to(circle,{
+                    left:'-=15%',
+                },'+=0.1')
+            
                 .set('.usp-image-holder > img',{
                     attr:{src:'./assets/usp2.png'}
                 },'<')
@@ -884,18 +897,27 @@ if(uspCount<3){
                     uspRight.style.opacity='0';
                     tl.to(uspSub,{
                         opacity:0,
+                        duration:0.15,
                     })
                     tl.to(uspP,{
                         opacity:0,
-                    },'<')
+                    },'-=0.05')
                     
                     tl.to('.usp-image-holder',{
                         scale:0.15,
                         rotateZ:'-45deg',
                         bottom:'35%',
-                    },'-=0.2')
+                    },'-=0.1')
                     tl.to('.usp-overlay',{
                         opacity:1,
+                    },'<')
+                    tl.to(uspP,{
+                        // opacity:0,
+                        textContent:"WINQ fosters seamless communication with a 24/7 live chat feature, improving customer satisfaction and building trust."
+                    },'<')
+                    tl.to(uspSub,{
+                        // opacity:0,
+                        textContent:'Enhanced Client Service',
                     },'<')
                     
                     tl.to(circle,{
@@ -904,14 +926,7 @@ if(uspCount<3){
                     tl.to(circle,{
                         left:'-=15%',
                     },'+=0.1')
-                    tl.to(uspSub,{
-                        // opacity:0,
-                        textContent:'Enhanced Client Service',
-                    },'<')
-                    tl.to(uspP,{
-                        // opacity:0,
-                        textContent:"WINQ fosters seamless communication with a 24/7 live chat feature, improving customer satisfaction and building trust."
-                    },'<')
+
                     .set('.usp-image-holder > img',{
                         attr:{src:'./assets/usp2.png'}
                     },'<')
@@ -949,28 +964,20 @@ uspLeft.addEventListener('click',()=>{
                 uspLeft.style.opacity='0';
                 tl.to(uspSub,{
                     opacity:0,
-                    // textContent:'Digital Transformation',
+                    duration:0.15,
                 })
                 tl.to(uspP,{
                     opacity:0,
-                    // textContent:"WINQ equips brokers with robust tools (cite the tools, give examples, say a feature that is directly applicable to the product)  and a dedicated social media expert support to establish a lasting social presence. Our social media experts will fortify your brand's success in the digital space.",
-                },'<')
+                },'-=0.05')
                 
                 tl.to('.usp-image-holder',{
                     scale:0.15,
                     rotateZ:'-45deg',
                     bottom:'35%',
-                },'-=0.2')
+                },'-=0.1')
                 tl.to('.usp-overlay',{
                     opacity:1,
                 },'<')
-                
-                tl.to(circle,{
-                    left:'+=15%',
-                },'<')
-                tl.to(circle,{
-                    left:'-=15%',
-                },'+=0.1')
                 tl.to(uspSub,{
                     // opacity:0,
                     textContent:'Multi-Carrier Marketplace',
@@ -979,6 +986,13 @@ uspLeft.addEventListener('click',()=>{
                     // opacity:0,
                     textContent:"Trust WINQ to elevate your insurance experience, ensuring comprehensive coverage tailored to your needs.",
                 },'<')
+                tl.to(circle,{
+                    left:'+=15%',
+                },'<')
+                tl.to(circle,{
+                    left:'-=15%',
+                },'+=0.1')
+               
                 .set('.usp-image-holder > img',{
                     attr:{src:'./assets/usp-img.png'}
                 },'<')
@@ -1001,12 +1015,11 @@ uspLeft.addEventListener('click',()=>{
                 case 1:
                     tl.to(uspSub,{
                         opacity:0,
-                        // textContent:'Digital Transformation',
+                        duration:0.15
                     })
                     tl.to(uspP,{
                         opacity:0,
-                        // textContent:"WINQ equips brokers with robust tools (cite the tools, give examples, say a feature that is directly applicable to the product)  and a dedicated social media expert support to establish a lasting social presence. Our social media experts will fortify your brand's success in the digital space.",
-                    },'<')
+                    },'-=0.05')
                     
                     tl.to('.usp-image-holder',{
                         scale:0.15,
@@ -1016,13 +1029,6 @@ uspLeft.addEventListener('click',()=>{
                     tl.to('.usp-overlay',{
                         opacity:1,
                     },'<')
-                    
-                    tl.to(circle,{
-                        left:'+=15%',
-                    },'<')
-                    tl.to(circle,{
-                        left:'-=15%',
-                    },'+=0.1')
                     tl.to(uspSub,{
                         // opacity:0,
                         textContent:'Digital Transformation',
@@ -1031,6 +1037,13 @@ uspLeft.addEventListener('click',()=>{
                         // opacity:0,
                         textContent:"WINQ equips brokers with robust tools (cite the tools, give examples, say a feature that is directly applicable to the product)  and a dedicated social media expert support to establish a lasting social presence. Our social media experts will fortify your brand's success in the digital space."
                     },'<')
+                    tl.to(circle,{
+                        left:'+=15%',
+                    },'<')
+                    tl.to(circle,{
+                        left:'-=15%',
+                    },'+=0.1')
+                    
                     .set('.usp-image-holder > img',{
                         attr:{src:'./assets/usp2.png'}
                     },'<')
@@ -1052,26 +1065,20 @@ uspLeft.addEventListener('click',()=>{
                     case 2:
                         tl.to(uspSub,{
                             opacity:0,
+                            duration:0.15
                         })
                         tl.to(uspP,{
                             opacity:0,
-                        },'<')
+                        },'-=0.05')
                         
                         tl.to('.usp-image-holder',{
                             scale:0.15,
                             rotateZ:'-45deg',
                             bottom:'35%',
-                        },'-=0.2')
+                        },'-=0.1')
                         tl.to('.usp-overlay',{
                             opacity:1,
                         },'<')
-                        
-                        tl.to(circle,{
-                            left:'+=15%',
-                        },'<')
-                        tl.to(circle,{
-                            left:'-=15%',
-                        },'+=0.1')
                         tl.to(uspSub,{
                             // opacity:0,
                             textContent:'AI-Layered Marketing',
@@ -1080,6 +1087,13 @@ uspLeft.addEventListener('click',()=>{
                             // opacity:0,
                             textContent:"WINQ’s AI-powered marketing interface empowers you to effortlessly post unlimited product ads across multiple social media platforms, design landing pages, and run campaigns with minimal human intervention. With WINQ, creation is simplified—you just need to act. We provide personalized support and social media expertise as your ally in expanding your insurance offerings and elevating your sales capabilities. We're dedicated to empowering you on your journey to success.",
                         },'<')
+                        tl.to(circle,{
+                            left:'+=15%',
+                        },'<')
+                        tl.to(circle,{
+                            left:'-=15%',
+                        },'+=0.1')
+                        
                         .set('.usp-image-holder > img',{
                             attr:{src:'./assets/usp2.png'}
                         },'<')
