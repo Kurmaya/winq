@@ -363,7 +363,7 @@ p{
         width:80%;
         height:30%;
         margin:auto;
-        top:-220px;
+        top:-190px;
         opacity: 0;
         color:white;
         display: flex;
@@ -413,6 +413,7 @@ p{
     }
     p{
         font-size: .9rem;
+        line-height: 1.2;
     }
     .exp{
         position: absolute;
@@ -428,7 +429,7 @@ p{
     }
     /* usp section */
     #usp{
-        background:linear-gradient( #004AAD 50%, transparent);
+        background:linear-gradient( #004AAD 50%, transparent 51%);
         /* border-radius: 0 0 50% 50%; */
     }
     .usp-holder{
@@ -439,9 +440,7 @@ p{
         border-radius: 0 0 50% 50% ;
         left:50%;
         transform: translateX(-50%);
-
-        /* transform: rotate(-110deg); */
-        bottom:60px;
+        bottom:100px;
     }
     .usp-image-holder{
         /* width: 85vw; */
@@ -479,7 +478,7 @@ p{
     }
     .usp-text-holder{
         position: relative;
-        top:60px;
+        top:100px;
         width:80%;
         margin: auto;
         height:30vh;
@@ -637,7 +636,7 @@ height: 300px;
  .partner img{
     width:120px;
     height: 120px;
-    border-radius: 50%;
+    border-radius: 100%;
     background: gray;
  }
  /* testimonials section  */
@@ -805,6 +804,7 @@ height: 300px;
     position: relative;
     left:12px;
     top:12px;
+    opacity: 0;
   }
   .faqs-holder{
     position: relative;

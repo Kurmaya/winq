@@ -125,7 +125,7 @@ leftArr.addEventListener('click',()=>{
                 textContent:'Digital Insurance Storefront with unlimited social & marketing tools',
             })
             .to(prodsPara,{
-                textContent:'WINQ empowers brokers with a diverse portfolio of insurance products and the ability to create unlimited social media content, landing pages, and product-specific campaigns designed to enhance their social/digital presence and build brand awareness. Our social media experts provide personalised guidance, helping you craft a captivating online strategy that resonates with your audience and strengthens your brand.',
+                textContent:'WINQ empowers brokers with a diverse insurance portfolio and tools to create unlimited social media content, landing pages, and product-specific campaigns. Our social media experts offer personalized guidance to craft captivating online strategies, enhancing your digital presence and brand awareness.',
                 opacity:1,
             },'<')
             .set('.image-holder>img',{attr:{src:"./assets/prods-hand.png"}})
@@ -213,7 +213,7 @@ leftArr.addEventListener('click',()=>{
                 textContent:'Multi-Carrier Marketplace',
             })
             .to(prodsPara,{
-                textContent:'The WINQ marketplace enables brokers to present a diverse array of products from leading insurance companies, catering to a wide spectrum of client needs and maximizing sales opportunities. This curated platform empowers brokers to expand their offerings and better serve their clientele, enhancing both reach and revenue potential.',
+                textContent:'The WINQ marketplace lets brokers offer a wide range of products from top insurance companies, meeting diverse client needs and maximizing sales. This platform helps brokers expand offeringsand better serve their clientele, enhancing both reach and revenue potential.',
                 opacity:1,
             },'<')
             .set('.image-holder>img',{attr:{src:"./assets/prods-hand.png"}})
@@ -498,7 +498,7 @@ rightArr.addEventListener('click',()=>{
                 textContent:'Digital Insurance Storefront with unlimited social & marketing tools',
             })
             .to(prodsPara,{
-                textContent:'WINQ empowers brokers with a diverse portfolio of insurance products and the ability to create unlimited social media content, landing pages, and product-specific campaigns designed to enhance their social/digital presence and build brand awareness. Our social media experts provide personalised guidance, helping you craft a captivating online strategy that resonates with your audience and strengthens your brand.',
+                textContent:'WINQ empowers brokers with a diverse insurance portfolio and tools to create unlimited social media content, landing pages, and product-specific campaigns. Our social media experts offer personalized guidance to craft captivating online strategies, enhancing your digital presence and brand awareness.',
                 opacity:1,
             },'<')
             .set('.image-holder>img',{attr:{src:"./assets/prods-hand.png"}})
@@ -586,7 +586,7 @@ rightArr.addEventListener('click',()=>{
                 textContent:'Multi-Carrier Marketplace',
             })
             .to(prodsPara,{
-                textContent:'The WINQ marketplace enables brokers to present a diverse array of products from leading insurance companies, catering to a wide spectrum of client needs and maximizing sales opportunities. This curated platform empowers brokers to expand their offerings and better serve their clientele, enhancing both reach and revenue potential.',
+                textContent:'The WINQ marketplace lets brokers offer a wide range of products from top insurance companies, meeting diverse client needs and maximizing sales. This platform helps brokers expand offeringsand better serve their clientele, enhancing both reach and revenue potential.',
                 opacity:1,
             },'<')
             .set('.image-holder>img',{attr:{src:"./assets/prods-hand.png"}})
@@ -866,7 +866,7 @@ if(uspCount<3){
                 },'<')
                 tl.to(uspP,{
                     // opacity:0,
-                    textContent:"WINQ’s AI-powered marketing interface empowers you to effortlessly post unlimited product ads across multiple social media platforms, design landing pages, and run campaigns with minimal human intervention. With WINQ, creation is simplified—you just need to act. We provide personalized support and social media expertise as your ally in expanding your insurance offerings and elevating your sales capabilities. We’re dedicated to empowering you on your journey to success."
+                    textContent:"WINQ’s AI-powered interface lets you easily post unlimited product ads, design landing pages, and run campaigns with minimal effort. We offer personalized support to expand your insurance offerings and boost sales.",
                 },'<')
                 tl.to(circle,{
                     left:'+=15%',
@@ -1025,7 +1025,7 @@ uspLeft.addEventListener('click',()=>{
                         scale:0.15,
                         rotateZ:'-45deg',
                         bottom:'35%',
-                    },'-=0.2')
+                    },'-=0.1')
                     tl.to('.usp-overlay',{
                         opacity:1,
                     },'<')
@@ -1085,7 +1085,7 @@ uspLeft.addEventListener('click',()=>{
                         },'<')
                         tl.to(uspP,{
                             // opacity:0,
-                            textContent:"WINQ’s AI-powered marketing interface empowers you to effortlessly post unlimited product ads across multiple social media platforms, design landing pages, and run campaigns with minimal human intervention. With WINQ, creation is simplified—you just need to act. We provide personalized support and social media expertise as your ally in expanding your insurance offerings and elevating your sales capabilities. We're dedicated to empowering you on your journey to success.",
+                            textContent:"WINQ’s AI-powered interface lets you easily post unlimited product ads, design landing pages, and run campaigns with minimal effort. We offer personalized support to expand your insurance offerings and boost sales.",
                         },'<')
                         tl.to(circle,{
                             left:'+=15%',

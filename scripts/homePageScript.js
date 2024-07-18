@@ -115,21 +115,22 @@ whyAnim.to(leftRect,{
     duration:.4,
 })
 whyAnim.to(circle,{
-    top:'90vh',
-    x:'-550%',
+    // top:'92vh',
+    top:usSpan.top+window.scrollY-(4*usSpan.height),
+    // x:'-550%',
+    x:usSpan.right-window.innerWidth-2*(usSpan.width),
     scale:.6,
     duration:.8,
 },'-=0.3')
 
 whyAnim.to(circle,{
     // top:((usSpan.top)-15-usSpan.height/1.5)+window.scrollY,
-    onStart:()=> {console.log('start')}    ,
+    // onStart:()=> {console.log('start')},
     top:usSpan.top+window.scrollY-(2*usSpan.height),
     // top:window.innerHeight+.085*window.innerHeight,
     // x:-((usSpan.left/2)+7)-usSpan.width/1.5,
     x:usSpan.right-window.innerWidth+4*(usSpan.width),
     scale:.2,
-    
     // opacity:0,  
     duration:.5,
 })
@@ -143,7 +144,7 @@ whyAnim.to(circle,{
 let prodsAnim = gsap.timeline({
     scrollTrigger:{
         trigger:'#us>.section-holder',
-        start:'top 5%',
+        start:'top 10%',
         // end: 'bottom 5%',
         scrub:true,
         // markers:true,
@@ -177,7 +178,7 @@ prodsAnim.to(circle,{
     x:'50%',
     top:aiLayer.getBoundingClientRect().bottom-aiLayer.getBoundingClientRect().height+window.scrollY-35,
     duration:1,
-},'+=0.1')
+},'<')
 
 prodsAnim.from('.left-arrow',{
 left:'-150%'
@@ -207,9 +208,9 @@ prodsAnim.to('.exp',{
 
 prodsAnim.to('.prods-bg',{
     rotateZ:'-110deg',
-    borderRadius: '25%',
+    borderRadius: '35%',
     x:'-20%',
-    y:'5%'
+    y:'10%'
     // width:'700px'
 })
 prodsAnim.to('#us > img',{
@@ -263,15 +264,15 @@ uspAnim.to(circle,{
     left:'-8%',
 },'<')
 
-uspAnim.from('.usp-text-holder',{
-    left:'150%'
-},'+=0.1')
+// uspAnim.from('.usp-text-holder',{
+//     left:'150%'
+// },'+=0.1')
 
 uspAnim.to(circle,{
     scale:0.8,
     top:(document.querySelector('.usp-image-holder').getBoundingClientRect().top+window.scrollY)-40,
     left:document.querySelector('.usp-image-holder').getBoundingClientRect().left,
-},'-=0.6')
+},'-=0.1')
 
 uspAnim.from('.usp-image-holder',{
     opacity:0,
@@ -310,7 +311,7 @@ uspTeamAnim.to(circle,{
 },'<')
 uspTeamAnim.to(circle,{
     top:(document.querySelector('.team-bg').getBoundingClientRect().bottom+scrollY)-80,
-    left:'40%',
+    left:'50%',
     scale:.6,
 },'+=0.1')
 const teamPersons = document.querySelectorAll('.team-person');
@@ -325,6 +326,10 @@ let teamAnim = gsap.timeline({
 })
 
 
+teamAnim.to(circle,{
+    top:teamPersons[0].getBoundingClientRect().top+window.scrollY+(teamPersons[0].getBoundingClientRect().height)/20,
+    left:(teamPersons[0].getBoundingClientRect().right)-teamPersons[3].getBoundingClientRect().width/3.5,
+})
 teamAnim.to(circle,{
     top:teamPersons[3].getBoundingClientRect().top+window.scrollY+(teamPersons[3].getBoundingClientRect().height)/5,
     left:(teamPersons[3].getBoundingClientRect().left)-teamPersons[3].getBoundingClientRect().width/2.5,
@@ -403,12 +408,18 @@ testiAnim.from('#faqs h2',{
     left:'-150%',
 },'<')
 .to(circle,{
-    top:(document.querySelector('.q-circle').getBoundingClientRect().top+window.scrollY)-document.querySelector('.q-circle').getBoundingClientRect().height/.65,
+    top:(document.querySelector('.q-circle').getBoundingClientRect().top+window.scrollY)-document.querySelector('.q-circle').getBoundingClientRect().height/.62,
     scale:.4,
     left:document.querySelector('.q-circle').getBoundingClientRect().left-38,
+    // opacity:0,
+})
+.to(circle,{
     opacity:0,
 })
-testiAnim.from('.bg-holder > * ',{
-    opacity:0,
-    top:'-25%',
-},'-=0.3')
+.to('.q-circle',{
+    opacity:1,
+},'<')
+// testiAnim.from('.bg-holder > * ',{
+//     // opacity:0,
+//     top:'-25%',
+// },'-=0.3')
