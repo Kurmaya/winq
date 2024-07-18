@@ -252,10 +252,12 @@ uspAnim.to(circle,{
     height:'50px',
     opacity:1,
     left:aiLayer.getBoundingClientRect().left*3+50,
+    zIndex:'9',
 },'<')
-uspAnim.to('.image-holder',{
-    left:'-150%',
+.to('#usp',{
+    background: 'linear-gradient(#004AAD 50%, transparent 50%)',
 })
+
 uspAnim.to('.prods-bg',{
     rotateZ:'0',
 },'<')
@@ -272,7 +274,10 @@ uspAnim.to(circle,{
     scale:0.8,
     top:(document.querySelector('.usp-image-holder').getBoundingClientRect().top+window.scrollY)-40,
     left:document.querySelector('.usp-image-holder').getBoundingClientRect().left,
-},'-=0.1')
+})
+.from('.usp-holder',{
+    top:'-50%',
+},'<')
 
 uspAnim.from('.usp-image-holder',{
     opacity:0,
@@ -294,14 +299,14 @@ let uspTeamAnim = gsap.timeline({
         scrub:true,
     }
 })
-uspTeamAnim.to('.usp-holder',{
-    width:'80%',
-    rotateZ:'-75deg',
-    left:'-55%', 
-})
+// uspTeamAnim.to('.usp-holder',{
+//     width:'80%',
+//     rotateZ:'-75deg',
+//     left:'-55%', 
+// })
 .to('.usp-image-holder',{
     opacity:0,
-},'<')
+})
 .from('.team-bg',{
     left:'-150%',
 },'<')
@@ -352,14 +357,18 @@ teamAnim.to(circle,{
 // })
 .to(circle,{
     top:(document.getElementById('partners').getBoundingClientRect().top+window.scrollY),
-    left:'58%',
+    left:'59%',
 })
 teamAnim.from('.partners-bg',{
     left:'-150%',
 },'<')
+// .to(circle,{
+//     top:(document.querySelector('.partners-desc').getBoundingClientRect().bottom+window.scrollY)-80,
+//     left:'78%',
+// })
 .to(circle,{
     top:(document.querySelector('.partners-desc').getBoundingClientRect().bottom+window.scrollY)+20,
-    left:'78%',
+    left:'83%',
 })
 
 
@@ -375,32 +384,51 @@ let partnerAnim = gsap.timeline({
 })
 
 partnerAnim.to(circle,{
-top:(document.querySelector('.partners-holder').getBoundingClientRect().top+window.scrollY)-80,
-left:'75%',
+top:(document.querySelector('.partners-holder').getBoundingClientRect().top+window.scrollY)+100,
+left:'35%',
 // left:'78%',
 })
 partnerAnim.to(circle,{
+    top:(document.querySelector('.partners-holder').getBoundingClientRect().bottom+window.scrollY)-document.querySelector('.partners-holder').getBoundingClientRect().height/2,
+    left:'-10%',
+    })
+partnerAnim.to(circle,{
     top:(document.querySelector('#testimonials h2').getBoundingClientRect().top+window.scrollY)-30,
     // left:'-8%',
-    left:'78%',
+    // left:'78%',
+    left:'25%',
     })
+    partnerAnim.to(circle,{
+        top:(document.querySelector('.inner-holder>img').getBoundingClientRect().top+window.scrollY)-50,
+        // left:'-8%',
+        // left:'78%',
+        left:'55%',
+        })
+        
     .from('#testimonials',{
         left:'-150%',
-    },'+=.7')
+    },'<')
 
 // testimonials animation
 let testiAnim = gsap.timeline({
     scrollTrigger:{
         trigger:'#testimonials',
-        start:'50% 30%',
+        start:'50% 40%',
         end:'90% 30%',
         scrub:true,
+        onStart:()=>{
+            document.querySelector('.faqs-bg').classList.remove('active');
+        },
+        onended:()=>{
+            document.querySelector('.faqs-bg').classList.remove('active');
+        }
         // markers:true,
     }
 })
 
 testiAnim.to(circle,{
     top:document.getElementById('faqs').getBoundingClientRect().top+window.scrollY,
+    left:document.querySelector('.q-circle').getBoundingClientRect().left-58,
 
 })
 
@@ -418,6 +446,9 @@ testiAnim.from('#faqs h2',{
 })
 .to('.q-circle',{
     opacity:1,
+    onended:()=>{
+        document.querySelector('.faqs-bg').classList.remove('active');
+    }
 },'<')
 // testiAnim.from('.bg-holder > * ',{
 //     // opacity:0,
