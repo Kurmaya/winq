@@ -271,7 +271,7 @@ uspAnim.to(circle,{
 // },'+=0.1')
 
 uspAnim.to(circle,{
-    scale:0.8,
+    scale:0.6,
     top:(document.querySelector('.usp-image-holder').getBoundingClientRect().top+window.scrollY)-40,
     left:document.querySelector('.usp-image-holder').getBoundingClientRect().left,
 })
