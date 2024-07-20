@@ -195,7 +195,7 @@ leftArr.addEventListener('click',()=>{
             .to(prodsPara,{
                 textContent:' ',
                 opacity:0,
-                // duration:0.1
+                duration:0.2
             },'<')
             .to('.image-holder',{
                 left:'-150%',
@@ -335,16 +335,12 @@ leftArr.addEventListener('click',()=>{
                 opacity:0,
                 duration:0.2
             },'<')
-         .to(prodsPara,{
-                textContent:'Unlock exclusive savings for WINQ users! Enjoy 10% to 15% discounts* on select items just for you. *Conditions apply ',
-                // opacity:1,
-            },'+=0.05')
             .to('.image-holder',{
                 left:'-150%',
                 duration:0.1,
                 ease:'power1'
             },'<')
-            .set('.image-holder>img',{attr:{src:"./assets/prods-discount.png"}})
+            .set('.image-holder>img',{attr:{src:"./assets/prods-multi.png"}})
             .to('.image-holder',{
                 left:'0',
                 duration:0.1,
@@ -352,22 +348,24 @@ leftArr.addEventListener('click',()=>{
             },'<')
             // .to(prodsHead,{
             //     opacity:1,
-            // },'<')
+            // })
             
             .to(prodsHead,{
                 width:'auto',
+                opacity:1,
                 // duration:.3,
                 // ease:'power1'
-                opacity:1,
-            },'<')
-            .to(prodsHead,{
-                textContent:'Special Discount for WINQ Users',
             })
+            .to(prodsHead,{
+                textContent:'Special Discount for WINQ Users ',
+            },'-=0.15')
             .to(prodsPara,{
-                // textContent:'Unlock exclusive savings for WINQ users! Enjoy 10% to 15% discounts* on select items just for you. *Conditions apply ',
-                opacity:1,
+                textContent:'Unlock exclusive savings for WINQ users! Enjoy 10% to 15% discounts* on select items just for you.',
+                // opacity:1,
             },'<')
-            
+            .to(prodsPara,{
+                opacity:1
+            },'-=0.03')
             
             console.log('6');
             
@@ -717,24 +715,20 @@ rightArr.addEventListener('click',()=>{
                 textContent:' ',
                 width:0,
                 opacity:0,
-                duration:.1,
+                duration:.2,
                 ease:'power1'
             })
             .to(prodsPara,{
                 textContent:' ',
                 opacity:0,
-                duration:0.1
+                duration:0.2
             },'<')
-         .to(prodsPara,{
-                textContent:'Unlock exclusive savings for WINQ users! Enjoy 10% to 15% discounts* on select items just for you. *Conditions apply ',
-                // opacity:1,
-            },'+=0.05')
             .to('.image-holder',{
                 left:'-150%',
                 duration:0.1,
                 ease:'power1'
             },'<')
-            .set('.image-holder>img',{attr:{src:"./assets/prods-discount.png"}})
+            .set('.image-holder>img',{attr:{src:"./assets/prods-multi.png"}})
             .to('.image-holder',{
                 left:'0',
                 duration:0.1,
@@ -742,21 +736,24 @@ rightArr.addEventListener('click',()=>{
             },'<')
             // .to(prodsHead,{
             //     opacity:1,
-            // },'<')
+            // })
             
             .to(prodsHead,{
                 width:'auto',
+                opacity:1,
                 // duration:.3,
                 // ease:'power1'
-                opacity:1,
-            },'<')
-            .to(prodsHead,{
-                textContent:'Special Discount for WINQ Users',
             })
+            .to(prodsHead,{
+                textContent:'Special Discount for WINQ Users ',
+            },'-=0.15')
             .to(prodsPara,{
-                // textContent:'Unlock exclusive savings for WINQ users! Enjoy 10% to 15% discounts* on select items just for you. *Conditions apply ',
-                opacity:1,
+                textContent:'Unlock exclusive savings for WINQ users! Enjoy 10% to 15% discounts* on select items just for you.',
+                // opacity:1,
             },'<')
+            .to(prodsPara,{
+                opacity:1
+            },'-=0.03')
          
             console.log('6');
             
