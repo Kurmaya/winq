@@ -497,7 +497,7 @@ p{
     }
     .usp-list{
         
-        font-family: 'ITC';
+        /* font-family: 'ITC'; */
         position: absolute;
         top:40%;
         transform: translateY(-40%);
@@ -521,11 +521,11 @@ p{
         text-align: center;
     }
     #usp h4{
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     #usp p{
-        font-size: .8rem;
-        font-family: 'ITC-med';
+        font-size: .9rem;
+        /* font-family: 'ITC-med'; */
         position:relative;
         /* top:30px; */
     }
@@ -845,6 +845,7 @@ height: 300px;
   }
   .question h4{
     color:#004AAD;
+    font-size: 1.2rem;
   }
   .answer{
     height: 10px;
