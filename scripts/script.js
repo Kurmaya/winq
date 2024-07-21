@@ -156,7 +156,7 @@ leftArr.addEventListener('click',()=>{
                 duration:0.1,
                 ease:'power1'
             },'<')
-            .set('.image-holder>img',{attr:{src:"./assets/prods-cost.png"}})
+            .set('.image-holder>img',{attr:{src:"./assets/prods-intu.png"}})
             .to('.image-holder',{
                 left:'0',
                 duration:0.1,
@@ -544,7 +544,7 @@ rightArr.addEventListener('click',()=>{
                 duration:0.1,
                 ease:'power1'
             },'<')
-            .set('.image-holder>img',{attr:{src:"./assets/prods-cost.png"}})
+            .set('.image-holder>img',{attr:{src:"./assets/prods-intu.png"}})
             .to('.image-holder',{
                 left:'0',
                 duration:0.1,
