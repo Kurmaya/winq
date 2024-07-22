@@ -134,7 +134,9 @@ whyAnim.to(circle,{
     // opacity:0,  
     duration:.5,
 })
-
+whyAnim.to('.us-img-one',{
+    top:'-15%',
+},'<')
     // whyAnim.to(spn,{
     //     opacity:1,
     // },'-=0.1')
@@ -213,8 +215,8 @@ prodsAnim.to('.prods-bg',{
     y:'10%'
     // width:'700px'
 })
-prodsAnim.to('#us > img',{
-    y:200,
+prodsAnim.to('.us-img-holder',{
+    y:300,
   },'<')
 
 
