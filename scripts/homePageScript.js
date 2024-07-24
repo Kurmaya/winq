@@ -72,11 +72,11 @@ whyAnim.to(circle,{
     x:'60%',  
 })
 whyAnim.to(circle,{
-    top:'35vh',
+    top:'34vh',
     x:'80%',  
 })
 whyAnim.to(circle,{
-    top:(rightRect.getBoundingClientRect().top-8+window.scrollY)-rightRect.getBoundingClientRect().height/2,
+    top:(rightRect.getBoundingClientRect().top-8+window.scrollY)-rightRect.getBoundingClientRect().height/1.7,
     x:'50%',  
     duration:.5,
 })
@@ -108,7 +108,7 @@ whyAnim.to(circle,{
     // x:'-660%',  
     x: leftRect.getBoundingClientRect().right-window.innerWidth,
     duration:.8,    
-},'-=0.4')
+},'-=0.6')
 
 whyAnim.to(leftRect,{
     rotateZ:'200deg',
